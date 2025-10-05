@@ -1,0 +1,8 @@
+.quality img { width:50px; }
+
+@media screen and (min-width: 868px) {	
+	#qualities #qualities-container .quality{
+		flex: 1 1 33%;
+		 padding: 10px 5px; 
+	}
+}
