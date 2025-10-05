@@ -1,0 +1,279 @@
+:root {
+	--color-Dark-Violet: 256 26% 20%;
+	--color-Grayish-Blue: 216 30% 68%;
+	--color-Very-Dark-Violet: 270 9% 17%;
+	--color-Dark-Grayish-Violet: 273 4% 51%;
+	--color-Very-Light-Gray: 0 0% 98%;
+}
+
+.bg_dark_violet { background-color: hsl(var(--color-Dark-Violet)); }
+.bg_ver_dark_violet { background-color: hsl(var(--color-Very-Dark-Violet)); }
+.bg_very_light_gray { background-color: hsl(var(--color-Very-Light-Gray));}
+
+.text_dark_violet { color: hsl(var(--color-Dark-Violet)); }
+.text_very_light_gray { color: hsl(var(--color-Very-Light-Gray));}
+.text_dark_grayish_violet { color: hsl(var(--color-Dark-Grayish-Violet));}
+
+.font_family_karla { font-family: 'Karla';}
+.font_family_DM_Serif_Display { font-family: 'DM Serif Display';}
+
+.fontweight_400 { font-weight: 400; }
+.fontweight_700 { font-weight: 700; }
+
+.container { padding-inline: 20px; }
+
+a { 
+	cursor: pointer; 	
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+.purple-background-white-text {	
+	color: hsl(var(--color-Very-Light-Gray));
+	border: 2px solid hsl(var(--color-Very-Light-Gray));		
+	transition: all 0.5s ease; /* allows for css effects on hover */
+}
+
+.purple-background-white-text:hover{
+	background-color: hsl(var(--color-Very-Light-Gray));	
+	color: hsl(var(--color-Dark-Violet));
+}
+
+html,
+body{
+	min-height: 100vh;
+	margin: 0;
+	font-family: 'Karla';
+	font-size: 16px;
+}
+
+
+
+/* mobile intro picture */
+img#intro-mobile {
+	height: 392px;
+    width: 100%;
+}
+
+/* intro section */
+section#mobile-first-section {
+	margin-top: -5px;
+	position: relative;
+}
+
+h1, h3 { font-family: 'DM Serif Display'; }
+
+h1{
+	line-height: 50px;
+	margin-top: 40px;
+	font-size: 56px;
+}
+	
+.find_out_heading {
+	font-size: 36px;
+	line-height: 36px;
+}
+.hero_content{
+    line-height: 23px;
+    padding-bottom: 30px;	
+	color: hsl(0, 0%, 98%);
+	font-size: 14px;
+}
+
+.other_content{
+    line-height: 23px;
+    padding-bottom: 30px;	
+	color: hsl(273, 4%, 51%);
+	font-size: 14px;
+}
+
+section#desktop-first-section { display: none; }
+section#mobile-first-section h1 {
+	font-size: 40px;
+	line-height: 40px;
+	position: relative;
+}
+section#mobile-first-section #mobile-left-pattern {
+	position: absolute;
+	top: 0;
+	left:0;
+}
+
+section#mobile-first-section {
+	text-align: center;
+    padding-block: 35px;
+	padding-bottom:  110px ;
+}
+
+section#mobile-first-section #mobile-right-pattern {
+	position: absolute;
+    top: 340px;
+    right: 0;
+    height: 313px;
+}
+
+.button {
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	padding: 8px 30px;
+	align-self: center;	
+	transition: all 0.5s ease; /* allows for css effects on hover */
+}
+
+/* space separattor */
+.clearfix{	
+	clear: both;
+	height: 70px;
+}
+
+/* qualities section */
+#qualities { text-align: center; }
+
+#qualities  hr{
+	width: 95px;
+    margin: auto;
+}
+
+#qualities  h1 {
+	font-size: 46px;
+	padding-bottom: 30px;
+}
+
+.quality img { width:50px; }
+
+/* find out message box */
+#find-out-container { text-align: center; }
+
+#find-out-container #find-out-more { 
+	position: relative;	
+	padding: 70px 50px;
+}
+
+#find-out-container #find-out-more h1{
+	padding-bottom: 25px;
+	position: relative;	
+	z-index: 1;
+	    margin-block: 0;
+}
+
+#find-out-container img#mobile-bg-pattern {   
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 260px;
+}
+
+#find-out-container img#desktop-bg-pattern {display: none; }
+
+
+
+@media screen and (min-width: 540px) {
+	img#intro-mobile {	height: 470px;}
+}
+
+@media screen and (min-width: 868px) {
+	.heading {
+		font-size: 45px;
+		line-height: 40px;
+		margin-bottom: 0;
+		text-align:left;
+	}
+
+	.container {
+		margin: auto;
+		padding-inline: 15%;
+		padding-block: 10px;
+	}
+	
+	/* hide mobile first section */
+	img#intro-mobile { display: none;}
+	
+	/* intro section */
+	section#mobile-first-section{display: none;	}
+		
+	section#desktop-first-section{
+		display: block;
+		position: relative;
+	}
+	section#desktop-first-section .desktop_hero {
+		display: flex;	
+		justify-content: space-between;
+		padding-block: 75px;
+		gap: 15px;
+	}
+		
+	section .desktop_hero hr{
+		width: 95px;
+		margin: 0;
+	}
+		
+
+	section#desktop-first-section .desktop_hero #picture {
+		height: 340px;
+		position: relative;
+	}
+	section#desktop-first-section .desktop_hero #picture img {		
+		height: 545px;
+		width: 450px;
+	}
+	
+	section#desktop-first-section #left-pattern {
+		position: absolute;
+		top: 305px;
+		height: 316px;
+	}
+	
+	 section#desktop-first-section #right-pattern {
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 470px;
+		height: 320px;
+	} 
+	
+	/* space separattor */
+	.clearfix{ height: 200px; }
+
+	/* qualities section */
+	#qualities { text-align: left; }
+	#qualities  hr {margin: 0; }
+	
+	#qualities #qualities-container {
+		display: flex;
+		justify-content: space-between;
+		text-align: left;
+	}
+		
+	/* find out message box */
+	#find-out-container img#mobile-bg-pattern {	display: none;}
+
+	#find-out-container #find-out-more {
+		margin-inline: auto;
+		padding-block: 45px;
+	}
+		
+	#find-out-container #find-out-more div {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	#find-out-container #find-out-more h1{
+		text-align: left;
+		font-weight: 400;
+		line-height: 40px;
+		margin-top: 0;
+		margin-bottom: 0;
+		padding: 0;
+	}
+	#find-out-container img#desktop-bg-pattern {
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 170px;
+		width: 400px;
+	}
+	
+	#find-out-container #find-out-more a {z-index: 1;} 	
+}
